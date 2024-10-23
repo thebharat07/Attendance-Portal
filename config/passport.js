@@ -80,6 +80,7 @@ passport.use('local-register', new LocalStrategy({
             messages.push("Please check the tickbox")
             return done(null, false, req.flash('error', messages));
         }
+        
         else if (year == "Year") {
             messages.push("Please select a year")
             return done(null, false, req.flash('error', messages));
